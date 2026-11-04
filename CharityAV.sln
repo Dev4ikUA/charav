@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37111.16 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharityAV", "CharityAV.csproj", "{F72BA43E-539B-4749-86F3-5BB64AB19BAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F72BA43E-539B-4749-86F3-5BB64AB19BAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F72BA43E-539B-4749-86F3-5BB64AB19BAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F72BA43E-539B-4749-86F3-5BB64AB19BAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F72BA43E-539B-4749-86F3-5BB64AB19BAF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {88500144-0DA0-4774-9E85-109C54FCDCB1}
+	EndGlobalSection
+EndGlobal

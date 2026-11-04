@@ -1,0 +1,70 @@
+﻿<Window x:Class="CharityAV48.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="CharityAV" Height="500" Width="750"
+        Background="#f5f7fa"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+
+    <Grid>
+        <!-- Верхня шапка -->
+        <Border Background="#0078d7" Height="60" VerticalAlignment="Top">
+            <TextBlock Text="CharityAV" FontSize="24" Foreground="White" VerticalAlignment="Center" Margin="20,0,0,0"/>
+        </Border>
+
+        <!-- Таб-контроль з вертикальними вкладками -->
+        <TabControl Margin="0,60,0,0" TabStripPlacement="Left">
+
+            <!-- Стиль вкладок -->
+            <TabControl.Resources>
+                <Style TargetType="TabItem">
+                    <Setter Property="Width" Value="120"/>
+                    <Setter Property="Height" Value="60"/>
+                    <Setter Property="FontSize" Value="16"/>
+                    <Setter Property="Margin" Value="0,2,0,2"/>
+                </Style>
+            </TabControl.Resources>
+
+            <!-- Вкладка Головна -->
+            <TabItem Header="Главная">
+                <Grid Background="White">
+                    <StackPanel Margin="20">
+                        <TextBlock Text="Статус компьютера" FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
+                        <TextBlock Text="Все модули защиты активны!" FontSize="14" Foreground="Gray"/>
+                        <ProgressBar x:Name="MainScanProgress" Height="25" Margin="0,20,0,0" Value="0" Foreground="#0078d7" Background="#d0e1f9"/>
+                        <TextBox x:Name="MainLogBox" Margin="0,20,0,0" Background="Black" Foreground="Lime"
+                                 FontFamily="Consolas" FontSize="14" IsReadOnly="True" VerticalScrollBarVisibility="Auto" Height="150"/>
+                        <Button Content="Сканировать" Width="120" Height="40" Click="StartScan_Click" RenderTransformOrigin="0.541,-0.095"/>
+                        <TextBlock x:Name="CriticalText" Text="Критические угрозы: 0" Foreground="Red" FontWeight="Bold" Width="218"/>
+                        <TextBlock x:Name="SuspiciousText" Text="Обычные угрозы: 0" Foreground="Orange" Height="20" Width="214"/>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+
+            <!-- Вкладка Карантин -->
+            <TabItem Header="Карантин">
+                <Grid Background="White">
+                    <TextBlock Text="Угрозы в карантине" FontSize="16" FontWeight="Bold" Margin="20,10,0,0"/>
+                    <ListBox x:Name="QuarantineList" Margin="20,40,20,20">
+                        <ListBoxItem>Burmalda.exe</ListBoxItem>
+                        <ListBoxItem>rundll32.dll</ListBoxItem>
+                        <ListBoxItem>Laff_RAT_Driver.sys</ListBoxItem>
+                    </ListBox>
+                    <Button Content="Очистить" Width="120" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,358,0,0"
+                            Click="OpenCleanupWindow_Click"/>
+                </Grid>
+            </TabItem>
+
+            <!-- Вкладка Налаштування -->
+            <TabItem Header="Настройки">
+                <Grid Background="White" Margin="20">
+                    <TextBlock Text="Настройки CharityAV" FontSize="16" FontWeight="Bold"/>
+                    <CheckBox Content="Автозапуск при старте Windows" Margin="0,50,0,0"/>
+                </Grid>
+            </TabItem>
+
+        </TabControl>
+        <Image Margin="642,0,10,400" Source="/rbt.png" Stretch="Fill"/>
+
+    </Grid>
+</Window>
